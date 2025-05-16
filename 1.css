@@ -1,0 +1,244 @@
+/* General Reset and Fonts */
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #2c7a7b; /* teal-700 */
+  color: white;
+  padding: 1rem 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+
+header nav button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  margin-left: 1rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+header nav button:hover {
+  color: #81e6d9; /* teal-300 */
+}
+
+/* Containers */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Sections */
+section {
+  margin-bottom: 3rem;
+}
+
+/* Buttons */
+button, input[type="submit"] {
+  background-color: #319795; /* teal-600 */
+  color: white;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover, input[type="submit"]:hover {
+  background-color: #2c7a7b; /* teal-700 */
+}
+
+/* Forms */
+form label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+  color: #2d3748; /* gray-800 */
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="number"],
+form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1.5px solid #cbd5e0; /* gray-300 */
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="password"]:focus,
+form input[type="number"]:focus,
+form textarea:focus {
+  border-color: #319795; /* teal-600 */
+  outline: none;
+  box-shadow: 0 0 3px #319795aa;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Hero Section */
+section.bg-white.py-16 {
+  background-color: white;
+  text-align: center;
+  padding: 4rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+section.bg-white.py-16 h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #2c7a7b;
+}
+
+section.bg-white.py-16 p {
+  color: #4a5568; /* gray-600 */
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+section.bg-white.py-16 a {
+  font-weight: 700;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Products Grid */
+#products .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(280px,1fr));
+  gap: 2rem;
+}
+
+#products .bg-white {
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  padding: 1rem;
+  transition: transform 0.2s ease;
+}
+
+#products .bg-white:hover {
+  transform: translateY(-5px);
+}
+
+#products img {
+  border-radius: 6px;
+  object-fit: cover;
+  width: 100%;
+  height: 180px;
+}
+
+#products h3 {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  color: #2c7a7b;
+}
+
+#products p {
+  color: #4a5568;
+  margin: 0.3rem 0;
+}
+
+#products .orderNowBtn {
+  margin-top: 1rem;
+  font-weight: 700;
+  width: 100%;
+}
+
+/* Order Modal */
+#orderModal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  z-index: 1000;
+}
+
+#orderModal > div {
+  background-color: white;
+  border-radius: 8px;
+  padding: 2rem;
+  max-width: 480px;
+  width: 100%;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  position: relative;
+}
+
+#closeOrderModal {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #4a5568;
+  cursor: pointer;
+  line-height: 1;
+  transition: color 0.3s ease;
+}
+
+#closeOrderModal:hover {
+  color: #2c7a7b;
+}
+
+/* Dashboard Orders */
+#ordersList > div {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
+}
+
+#ordersList p {
+  margin: 0.2rem 0;
+}
+
+/* Footer */
+footer {
+  background-color: #2c7a7b;
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  #products .grid {
+    grid-template-columns: 1fr;
+  }
+}
